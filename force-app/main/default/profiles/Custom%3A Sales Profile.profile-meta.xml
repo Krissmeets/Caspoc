@@ -14,6 +14,10 @@
     <layoutAssignments>
         <layout>CAS_Page_Template__c-Page Template Layout</layout>
     </layoutAssignments>
+    <tabVisibilities>
+        <tab>CAS_Page_Template__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
