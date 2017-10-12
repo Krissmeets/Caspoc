@@ -30,7 +30,8 @@ public with sharing class CAS_PageController {
     						order by Sequence__c]) {
     		ret.add((string) fso.get('Name'));
 
-    	} 
+    	}
+    	if (ret.size() == 0) ret.add('NO TEMPLATES');
     	return ret;
     }
 

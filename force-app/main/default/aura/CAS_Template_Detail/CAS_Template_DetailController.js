@@ -8,13 +8,47 @@
     	e1.fire();
 
     },
-    jsSelectTemplate : function(cmp, evt, hlp) {
-    	var sTmp = cmp.find("CASTemplate").get("v.value");
-    	alert("selected:" + sTmp);
+    
+    jsLoadTemplateDetail : function(cmp, evt) {
+    	var sTemplate = evt.getParam("Template");
+		
+		var arcmp = []; 
 
-    	var e = cmp.getEvent("SelectTemplateEvent");
-    	e.setParams({"Template": sTmp});
-    	e.fire();
+    	$A.createComponent(
+    		"lightning:input", 
+    		{
+    			"type" : "checkbox",
+    			"aura:id" : "field",
+    			"label": sTemplate,
+    		}, function(ccmp,csts,cerr) {
+    			arcmp.push(ccmp);
+    		}
 
+    	);
+
+    	$A.createComponent(
+    		"lightning:button", 
+    		{
+    			"aura:id" : "button2",
+    			"label": sTemplate,
+    			"onclick" : cmp.getReference("c.jsValidate") 
+    		}, function(ccmp,csts,cerr) {
+    			arcmp.push(ccmp);
+    		}
+
+    	);
+
+    	var obj = cmp.get("v.temp");
+    	obj = [];
+    	for (var i=0; i<arcmp.length;i++) obj.push(arcmp[i]);
+    	cmp.set("v.temp",obj);
+
+
+    },
+    
+    jsValidate : function(cmp) {
+    	alert ("clicked!");
     }
+
+
 })

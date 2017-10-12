@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>boolean</fullName>
+        <default>false</default>
+        <label>boolean</label>
+    </customValue>
+    <customValue>
+        <fullName>number</fullName>
+        <default>false</default>
+        <label>number</label>
+    </customValue>
+    <customValue>
+        <fullName>text</fullName>
+        <default>false</default>
+        <label>text</label>
+    </customValue>
+    <customValue>
+        <fullName>date</fullName>
+        <default>false</default>
+        <label>date</label>
+    </customValue>
+    <customValue>
+        <fullName>picklist</fullName>
+        <default>false</default>
+        <label>picklist</label>
+    </customValue>
+    <masterLabel>Field Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

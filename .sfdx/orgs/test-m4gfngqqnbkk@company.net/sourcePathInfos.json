@@ -32,16 +32,14 @@
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default",
             "isDirectory": true,
-            "size": 442,
-            "modifiedTime": 1507740984000,
-            "changeTime": 1507740984000,
-            "contentHash": "3d6afaff67c0df4791d60f99f619a69d4197dc88",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 476,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "d1523e055582ec608e92721bafda4d3e0a1c9c40"
         }
     ],
     [
@@ -154,14 +152,13 @@
         {
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/aura/CAS_Template_Detail/CAS_Template_Detail.cmp",
             "isDirectory": false,
-            "size": 1133,
-            "modifiedTime": 1507744873000,
-            "changeTime": 1507744873000,
-            "contentHash": "62a3298467383caf530cc9150baa07f6e3de74b8",
+            "size": 1204,
+            "modifiedTime": 1507799733000,
+            "changeTime": 1507799733000,
+            "contentHash": "481b54e52ac5b3028560715d4ab34b485d24a516",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
@@ -199,14 +196,13 @@
         {
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/aura/CAS_Template_Detail/CAS_Template_DetailController.js",
             "isDirectory": false,
-            "size": 469,
-            "modifiedTime": 1507744823000,
-            "changeTime": 1507744823000,
-            "contentHash": "93578583b78452bc8264e5ef2c49be672430af76",
+            "size": 1030,
+            "modifiedTime": 1507801900000,
+            "changeTime": 1507801900000,
+            "contentHash": "f19bc6cace90e5c45c25a9cb56afce0d18e26289",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
@@ -304,14 +300,13 @@
         {
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/aura/CAS_Template_Selector/CAS_Template_Selector.cmp",
             "isDirectory": false,
-            "size": 856,
-            "modifiedTime": 1507746001000,
-            "changeTime": 1507746001000,
-            "contentHash": "07f4eb483c34c3441f1a3bbaa87d27c6571d1074",
+            "size": 883,
+            "modifiedTime": 1507796789000,
+            "changeTime": 1507796020000,
+            "contentHash": "f4880c01c2095178de574b7bacaba1d4cba30c4b",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
@@ -349,14 +344,13 @@
         {
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/aura/CAS_Template_Selector/CAS_Template_SelectorController.js",
             "isDirectory": false,
-            "size": 609,
-            "modifiedTime": 1507744821000,
-            "changeTime": 1507744821000,
-            "contentHash": "4a362c65207b52efec588c982c7b863dcad1537b",
+            "size": 945,
+            "modifiedTime": 1507796793000,
+            "changeTime": 1507796793000,
+            "contentHash": "d7185e713088b07f32971f5c81c1dc063f5274ea",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
@@ -409,14 +403,13 @@
         {
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/classes/CAS_PageController.cls",
             "isDirectory": false,
-            "size": 799,
-            "modifiedTime": 1507729023000,
-            "changeTime": 1507729023000,
-            "contentHash": "774f194beb6dbf4a8fa6e642e31ac88278192330",
+            "size": 849,
+            "modifiedTime": 1507796786000,
+            "changeTime": 1507796786000,
+            "contentHash": "d4b526ce4d1cb22c1686d9422328aab0c2c9917a",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "isWorkspace": false
         }
     ],
     [
@@ -437,16 +430,14 @@
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/globalValueSets",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/globalValueSets",
             "isDirectory": true,
-            "size": 102,
-            "modifiedTime": 1507710210000,
-            "changeTime": 1507710210000,
-            "contentHash": "8aeb1d20c51606b39a686ac16530babe9824ea83",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 136,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "a4e92e3ffbbf3d77e6e0eae13f4cff9a0c0a08c6"
         }
     ],
     [
@@ -467,46 +458,40 @@
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/layouts",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/layouts",
             "isDirectory": true,
-            "size": 102,
-            "modifiedTime": 1507741139000,
-            "changeTime": 1507741139000,
-            "contentHash": "b9020721316f492c634c99ddc21c0e759964a5c0",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 136,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "40be0fed8d00646efc0a97e0f3775bad2ab94bde"
         }
     ],
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/layouts/CAS_Page_Template__c-Page Template Layout.layout-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/layouts/CAS_Page_Template__c-Page Template Layout.layout-meta.xml",
             "isDirectory": false,
-            "size": 2363,
-            "modifiedTime": 1507728647000,
-            "changeTime": 1507728647000,
-            "contentHash": "f1db4942ae8422a82384911695b3ea4a3f71fb09",
             "isMetadataFile": true,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 2877,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "305e99c9f3068cc6664ae56f7ac9f7fe6456f313"
         }
     ],
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects",
             "isDirectory": true,
-            "size": 136,
-            "modifiedTime": 1507726066000,
-            "changeTime": 1507726066000,
-            "contentHash": "19243dd95f71cca4d8da545dc35c256144a1b2c6",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 170,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "9ad83e669f567e3c7295f4c3038480985715977c"
         }
     ],
     [
@@ -662,76 +647,66 @@
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles",
             "isDirectory": true,
-            "size": 204,
-            "modifiedTime": 1507728647000,
-            "changeTime": 1507728647000,
-            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 238,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "42554a709c1121ca534bf65fadad0890183fda28"
         }
     ],
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Admin.profile-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Admin.profile-meta.xml",
             "isDirectory": false,
-            "size": 17752,
-            "modifiedTime": 1507728647000,
-            "changeTime": 1507728647000,
-            "contentHash": "2ea71c5514589637a05e2d8e69b512dc90292bb4",
             "isMetadataFile": true,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 18216,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "ccbf78c8a6c64d0fb2e0a1e3ebc1c05a7c683e06"
         }
     ],
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
             "isDirectory": false,
-            "size": 4822,
-            "modifiedTime": 1507728647000,
-            "changeTime": 1507728647000,
-            "contentHash": "b6c577483678917f06d339fd8c5a276c84869c91",
             "isMetadataFile": true,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 6662,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "13a5d197e599a29a0f32ee15d5a8e39a75d6a3dc"
         }
     ],
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
             "isDirectory": false,
-            "size": 4822,
-            "modifiedTime": 1507728647000,
-            "changeTime": 1507728647000,
-            "contentHash": "b6c577483678917f06d339fd8c5a276c84869c91",
             "isMetadataFile": true,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 6662,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "13a5d197e599a29a0f32ee15d5a8e39a75d6a3dc"
         }
     ],
     [
         "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
             "isDirectory": false,
-            "size": 5160,
-            "modifiedTime": 1507728647000,
-            "changeTime": 1507728647000,
-            "contentHash": "27ee5e45def73c165c50b4870ca2e0a1f244f169",
             "isMetadataFile": true,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 7000,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "6b08248adec78ee1099b7060a214cd9921b9d0c5"
         }
     ],
     [
@@ -792,6 +767,175 @@
             "state": "u",
             "isWorkspace": true,
             "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/globalValueSets/Field_Type.globalValueSet-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/globalValueSets/Field_Type.globalValueSet-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 869,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "2b2280a7897c39bb70faf415562b32cc473b59db"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/CAS_Page_Detail__c.object-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/CAS_Page_Detail__c.object-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 2169,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "f4aee7f3cb0fdc177ec51ad526bd14f55ca8bb6b"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Default__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Default__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 360,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "a60aaec2d85738a612c7d673d87949f23294f9e3"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Label__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Label__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 356,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "437012c1547ff4ced70c457d1a6247032a02e007"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Page_Template__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Page_Template__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 576,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "cb95161c47d3d8d38123444627b89c2dafe8658e"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Required__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Required__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 322,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "5b279a1052de163b7b8200ced7d3b558ea3223d1"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Type__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields/Type__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 423,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "f31ef683ac5ba0619e6ccb83fb9deb9e9e1c2a01"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/layouts/CAS_Page_Detail__c-CAS Page Detail Layout.layout-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/layouts/CAS_Page_Detail__c-CAS Page Detail Layout.layout-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 2758,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "c89a423723776fa2fd1317f576eb4c8c0cd8d272"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/flexipages/Page_Template_Record_Page.flexipage-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/flexipages/Page_Template_Record_Page.flexipage-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 2935,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "c47915dc13286bc5a318d14b489b216aba9c2e3c"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Trial Customer Portal User.profile-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/profiles/Trial Customer Portal User.profile-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 2525,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "ed272b7fa4e1bb009ffffcdf267467c9ecb132ac"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 136,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "8f1f7805ec1ef568e0f3428e5d56e3afa36da6d0"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/objects/CAS_Page_Detail__c/fields",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 238,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "4b9215b89e7d66792164bd7c293848961a2ec589"
+        }
+    ],
+    [
+        "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/flexipages",
+        {
+            "state": "u",
+            "sourcePath": "/Users/ksmeets/Documents/Technical/Caspoc/bustemp/force-app/main/default/flexipages",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1507803473000,
+            "changeTime": 1507803473000,
+            "contentHash": "33df6c153ed816b9246b3d567cdf9dc748b4571d"
         }
     ]
 ]

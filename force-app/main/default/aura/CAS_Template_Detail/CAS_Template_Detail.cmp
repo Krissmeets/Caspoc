@@ -1,22 +1,23 @@
 <aura:component implements="flexipage:availableforRecordHome, lightning:actionOverride,force:hasRecordId,force:hasSObjectName" access="global" controller="CAS_PageController">
 
 <aura:attribute name="sObjectName" type="String" />
-<aura:attribute name="temp" type="String" default="Nothing Selected"/>
+<aura:attribute name="temp" type="Object[]"/>
+<aura:handler name="SelectTemplateEvent" event="c:CAS_Template_Selected" action="{!c.jsLoadTemplateDetail}"/>
 
     <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
 
        <div class="slds-modal__container">
-					<c:CAS_Template_Selector sObjectName="{!v.sObjectName}"/>
+					<c:CAS_Template_Selector sObjectName="{!v.sObjectName}" />
 
             <div aura:id="DetailPage">
             <div class="slds-modal__header">
 	           <h3 class="slds-text-heading--medium">Record Detail</h3>
-    	    	{!v.sObjectName}
+    	    	{!v.temp}
            </div>
 
             <div class="slds-modal__footer">                
                 <lightning:button variant="neutral" label="Cancel" onclick="{!c.jsNavigateHome}"/>
-                <lightning:button variant="brand" label="Select" onclick="{!c.jsSelectTemplate}" />
+                <lightning:button variant="brand" label="Create" onclick="{!c.jsCreate}" />
             </div>
 
 		</div>

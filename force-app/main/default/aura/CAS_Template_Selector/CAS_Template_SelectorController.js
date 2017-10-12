@@ -12,7 +12,12 @@
 			var sState = res.getState(); 
 			if ( sState == "SUCCESS") {
 				cmp.set("v.TemplateValues",res.getReturnValue());
-				cmp.find("CASTemplate").set("v.value", res.getReturnValue()[0]);
+				var sTmp = res.getReturnValue()[0];
+
+				cmp.find("CASTemplate").set("v.value", sTmp);
+				var e1 = cmp.getEvent("SelectTemplateEvent");
+    			e1.setParam("Template",sTmp);
+    			e1.fire();					
 			} else {
 				alert("Error Loading Templates:" + sState);
 
@@ -21,6 +26,14 @@
 		})
 		$A.enqueueAction(aLoadTemplate);
 
+	},
+
+	jsChangeTemplate : function(cmp,evt,hlp) {
+
+		var sTmp = cmp.find("CASTemplate").get("v.value");
+		var e1 = cmp.getEvent("SelectTemplateEvent");
+    	e1.setParam("Template",sTmp);
+    	e1.fire();		
 	}
 
 })
