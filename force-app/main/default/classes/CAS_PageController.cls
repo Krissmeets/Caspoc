@@ -1,20 +1,36 @@
 public with sharing class CAS_PageController {
     
     public class clTemplate {
-    	string Page_name;
-    	string Page_columns;
+    	@AuraEnabled public String Name;
+    	@AuraEnabled public String Label;
+    	@AuraEnabled public String Type;
+    	@AuraEnabled public String DefaultValue;
+    	@AuraEnabled public Boolean Required;
+
+    	public clTemplate(string v1, string v2, string v3, string v4, boolean v5) {
+    		Name = v1;
+    		Label = v2;
+    		Type = v3;
+    		DefaultValue = v4;
+    		Required = v5;
+    	}
     }
 
 	@AuraEnabled
-    public static List<clTemplate> LoadTemplateDetail(string v_template) {
+    public static List<clTemplate> LoadTemplateDetail(string v_object, string v_template) {
     	List<clTemplate> ret = new list<clTemplate>();
 
-    	clTemplate tmp = new clTemplate();
-    	tmp.Page_name = 'Temp Page Name';
-    	tmp.Page_columns = '1';
+		for (CAS_Page_Detail__c fso: 	[SELECT Name, Type__c, Default__c, Required__c, Label__c 
+							FROM CAS_Page_Detail__c
+							WHERE Page_Template__r.Object__c = :v_object
+							AND Page_Template__r.Name = :v_template
+							ORDER BY Sequence__c]) {
+	
+		   	clTemplate tmp = new clTemplate(fso.Name, fso.Label__c, fso.Type__c, fso.Default__c,fso.Required__c);
+	    	ret.add(tmp);
 
-    	ret.add(tmp);
-
+		}
+ 
     	return ret;
 
     }

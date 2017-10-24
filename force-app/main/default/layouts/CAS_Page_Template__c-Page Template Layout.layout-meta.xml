@@ -62,11 +62,14 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Sequence__c</fields>
         <fields>Label__c</fields>
         <fields>Type__c</fields>
         <fields>Default__c</fields>
         <fields>Required__c</fields>
         <relatedList>CAS_Page_Detail__c.Page_Template__c</relatedList>
+        <sortField>Sequence__c</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

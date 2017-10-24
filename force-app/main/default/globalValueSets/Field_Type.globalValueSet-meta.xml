@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>boolean</fullName>
+        <fullName>checkbox</fullName>
         <default>false</default>
-        <label>boolean</label>
+        <label>checkbox</label>
     </customValue>
     <customValue>
         <fullName>number</fullName>
@@ -24,6 +24,21 @@
         <fullName>picklist</fullName>
         <default>false</default>
         <label>picklist</label>
+    </customValue>
+    <customValue>
+        <fullName>none</fullName>
+        <default>false</default>
+        <label>none</label>
+    </customValue>
+    <customValue>
+        <fullName>phone</fullName>
+        <default>false</default>
+        <label>phone</label>
+    </customValue>
+    <customValue>
+        <fullName>url</fullName>
+        <default>false</default>
+        <label>url</label>
     </customValue>
     <masterLabel>Field Type</masterLabel>
     <sorted>false</sorted>

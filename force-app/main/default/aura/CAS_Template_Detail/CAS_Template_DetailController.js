@@ -1,5 +1,38 @@
-({
-   
+({  
+  
+	jsInit : function (cmp,evt,hlp) {
+
+
+//		var cmpPage1 = cmp.find("Pagedtl");
+//		$A.util.addClass(cmpPage1,"slds-modal__header");
+//		$A.util.addClass(cmpPage1,"slds-modal__content");
+
+//		var cmpPage = cmp.find("Pagehdr");
+//		$A.util.addClass(cmpPage,"slds-modal__container");
+
+
+
+		var sObjectName = cmp.get("v.sObjectName");
+	
+		cmp.find("forceRecordObject").getNewRecord(
+	    	sObjectName,
+	    	null,
+	    	false,
+	    	$A.getCallback(
+	    		function() {
+		    		var rec = cmp.get("v.objectrecord");
+		    		var recerr = cmp.get("v.objecterror");
+					if (recerr || (rec == null)) {
+						hlp.jsAddMessage(cmp,"INIT:" + recerr);
+					}
+	   			}
+    	)
+
+    );
+
+	},
+
+
     jsNavigateHome : function(cmp, evt, hlp) {
 		var sObjectName = cmp.get("v.sObjectName");
 
@@ -9,46 +42,81 @@
 
     },
     
-    jsLoadTemplateDetail : function(cmp, evt) {
-    	var sTemplate = evt.getParam("Template");
+    jsLoadTemplateDetail : function(cmp, evt,hlp) {
+    
+
+		var aLoadTemplateDetail = cmp.get("c.LoadTemplateDetail")
+		var sObjectName = cmp.get("v.sObjectName");
+		var sTemplate = evt.getParam("Template");
+
+		console.log('LOG:' + sObjectName);
 		
-		var arcmp = []; 
+		//### Retrieve the available templates
+		aLoadTemplateDetail.setParams({"v_object":sObjectName, "v_template":sTemplate});
+		aLoadTemplateDetail.setCallback(this, function(res) {
+			var sState = res.getState(); 
+			if ( sState == "SUCCESS") {
+				var tmp = res.getReturnValue();
+				console.log (tmp);
+				hlp.jsBuildPage(cmp, tmp);
 
-    	$A.createComponent(
-    		"lightning:input", 
-    		{
-    			"type" : "checkbox",
-    			"aura:id" : "field",
-    			"label": sTemplate,
-    		}, function(ccmp,csts,cerr) {
-    			arcmp.push(ccmp);
-    		}
+			} else {
+				alert("Error Loading Template Detail:" + sState);
 
-    	);
+			}
 
-    	$A.createComponent(
-    		"lightning:button", 
-    		{
-    			"aura:id" : "button2",
-    			"label": sTemplate,
-    			"onclick" : cmp.getReference("c.jsValidate") 
-    		}, function(ccmp,csts,cerr) {
-    			arcmp.push(ccmp);
-    		}
-
-    	);
-
-    	var obj = cmp.get("v.temp");
-    	obj = [];
-    	for (var i=0; i<arcmp.length;i++) obj.push(arcmp[i]);
-    	cmp.set("v.temp",obj);
-
+		})
+		$A.enqueueAction(aLoadTemplateDetail);
 
     },
-    
-    jsValidate : function(cmp) {
-    	alert ("clicked!");
-    }
 
+    jsCreate : function (cmp,evt,hlp) {
+    	var rec = cmp.get("v.objectfields");
+ 					
+    	var allvalid = cmp.get("v.temp").reduce(
+    		function (val, icmp) {
+    			if (icmp.isInstanceOf("lightning:input")) {
+    				
+    				switch(icmp.get("v.type")) {
+    					case "text":
+    						rec[icmp.get("v.name")] = icmp.get("v.value");
+    						break;
+    					case "checkbox":
+    						rec[icmp.get("v.name")] = true; //icmp.get("v.checked");
+    						break;
+    				}
+    				icmp.showHelpMessageIfInvalid();
+ 					return val && icmp.get('v.validity').valid;
+ 				}
+ 				else return val && true;
+    		}, true);
+    	cmp.set("v.objectfields",rec);
+
+    	if (allvalid) {
+//    		console.log(cmp.get("v.objectfields"));
+
+			cmp.find("forceRecordObject").saveRecord(function(res) {
+
+					if (res.state == "SUCCESS" || res.state == "DRAFT") {
+						var tmsg = $A.get("e.force:showToast");
+						tmsg.setParams({"title": "Create Record", "message": "New Record Created", "duration" : "500", "type" : "success"});
+						tmsg.fire();
+
+					} else {
+						hlp.jsAddMessage(cmp,"Error saving record:" + JSON.stringify(res.error));
+					}
+
+				}
+			)
+
+
+    	} else {
+			var tmsg = $A.get("e.force:showToast");
+			tmsg.setParams({"title": "Create Record", "message": "Please review input", "duration" : "500", "type" : "warning"});
+			tmsg.fire();
+    	}   	
+
+    }
+    
 
 })

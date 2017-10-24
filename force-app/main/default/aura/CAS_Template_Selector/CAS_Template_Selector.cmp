@@ -5,20 +5,17 @@
 <aura:registerEvent name="SelectTemplateEvent" type="c:CAS_Template_Selected"/>
 <aura:handler name="init" value="{!this}" action="{!c.jsInit}"/>
 
-            <div class="slds-modal__header">
 
-                    <h2 class="slds-text-heading--medium">Select Template</h2>
+    <h2 class="slds-text-heading--medium">Select Template</h2>
 
 	object:{!v.sObjectName}
 
-				<lightning:select aura:id="CASTemplate" name="CASTemplate" label="Template" class="slds-size--1-of-2 slds-p-horizontal_x-small" onchange="{!c.jsChangeTemplate}">
-                    <aura:iteration items="{!v.TemplateValues}" var="item">
-                        <option value="{!item}">{!item}</option>
-                    </aura:iteration>
+	<lightning:select aura:id="CASTemplate" name="CASTemplate" label="Template" class="slds-size--1-of-2 slds-p-horizontal_x-small" onchange="{!c.jsChangeTemplate}">
+        <aura:iteration items="{!v.TemplateValues}" var="item">
+            <option value="{!item}">{!item}</option>
+        </aura:iteration>
 
-                </lightning:select>
-			</div>
-
+    </lightning:select>
 
 
 </aura:component>

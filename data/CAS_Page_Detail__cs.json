@@ -1,0 +1,66 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "CAS_Page_Detail__c",
+                "referenceId": "CAS_Page_Detail__cRef1"
+            },
+            "Name": "Name",
+            "Type__c": "text",
+            "Page_Template__c": "@CAS_Page_Template__cRef2",
+            "Default__c": "ENTER COMPANY NAME",
+            "Required__c": true,
+            "Label__c": "Name"
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Detail__c",
+                "referenceId": "CAS_Page_Detail__cRef2"
+            },
+            "Name": "Can_email__c",
+            "Type__c": "checkbox",
+            "Page_Template__c": "@CAS_Page_Template__cRef3",
+            "Default__c": "true",
+            "Required__c": false,
+            "Label__c": "Can email",
+            "Sequence__c": 4
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Detail__c",
+                "referenceId": "CAS_Page_Detail__cRef3"
+            },
+            "Name": "Site",
+            "Type__c": "text",
+            "Page_Template__c": "@CAS_Page_Template__cRef3",
+            "Default__c": "Headquarters",
+            "Required__c": false,
+            "Label__c": "Site",
+            "Sequence__c": 2
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Detail__c",
+                "referenceId": "CAS_Page_Detail__cRef4"
+            },
+            "Name": "FILLER1",
+            "Type__c": "none",
+            "Page_Template__c": "@CAS_Page_Template__cRef3",
+            "Required__c": false,
+            "Label__c": "FILLER",
+            "Sequence__c": 3
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Detail__c",
+                "referenceId": "CAS_Page_Detail__cRef5"
+            },
+            "Name": "Name",
+            "Type__c": "text",
+            "Page_Template__c": "@CAS_Page_Template__cRef3",
+            "Required__c": true,
+            "Label__c": "Name",
+            "Sequence__c": 1
+        }
+    ]
+}

@@ -1,13 +1,17 @@
 ({
 	jsInit : function(cmp) {
 
+	//	var cmpPage = cmp.find("Pagehdr");
+	//	$A.util.addClass(cmpPage,"slds-modal__header");
+
+
 		var aLoadTemplate = cmp.get("c.LoadTemplates")
 		var sObjectName = cmp.get("v.sObjectName");
 
 		console.log('LOG:' + sObjectName);
 		
 		//### Retrieve the available templates
-		aLoadTemplate.setParams({v_object:sObjectName});
+		aLoadTemplate.setParams({"v_object":sObjectName});
 		aLoadTemplate.setCallback(this, function(res) {
 			var sState = res.getState(); 
 			if ( sState == "SUCCESS") {

@@ -1,0 +1,15 @@
+
+<aura:component implements="force:appHostable, flexipage:availableForAllPageTypes, flexipage:availableForRecordHome, force:hasRecordId,force:hasSObjectName" access="global" controller="CAS_PageController">
+
+
+    <div class="slds-card">
+	    <div class="slds-card__header">
+			<h2 class="slds-text-heading--small slds-m-bottom--small">Quick Create</h2>
+		</div> 
+
+		<div class="slds-card__body slds-card__body_inner">
+			<c:CAS_Template_Detail sObjectName="{!v.sObjectName}" />
+		</div>
+</div>
+
+</aura:component>	
