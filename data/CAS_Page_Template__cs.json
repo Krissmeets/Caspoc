@@ -5,30 +5,50 @@
                 "type": "CAS_Page_Template__c",
                 "referenceId": "CAS_Page_Template__cRef1"
             },
-            "Sequence__c": 3,
-            "Page_columns__c": "3",
+            "Name": "Standard Opportunity",
             "Object__c": "Opportunity",
-            "Name": "Template 3"
+            "Page_columns__c": "3",
+            "Sequence__c": 3
         },
         {
             "attributes": {
                 "type": "CAS_Page_Template__c",
                 "referenceId": "CAS_Page_Template__cRef2"
             },
-            "Sequence__c": 2,
-            "Page_columns__c": "2",
+            "Name": "HQ Account",
             "Object__c": "Account",
-            "Name": "Template 2"
+            "Page_columns__c": "2",
+            "Sequence__c": 2
         },
         {
             "attributes": {
                 "type": "CAS_Page_Template__c",
                 "referenceId": "CAS_Page_Template__cRef3"
             },
-            "Sequence__c": 1,
-            "Page_columns__c": "1",
+            "Name": "Standard Account",
             "Object__c": "Account",
-            "Name": "Template 1"
+            "Page_columns__c": "1",
+            "Sequence__c": 1
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Template__c",
+                "referenceId": "CAS_Page_Template__cRef4"
+            },
+            "Name": "Executive Contact",
+            "Object__c": "Contact",
+            "Page_columns__c": "2",
+            "Sequence__c": 2
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Template__c",
+                "referenceId": "CAS_Page_Template__cRef5"
+            },
+            "Name": "Standard Contact",
+            "Object__c": "Contact",
+            "Page_columns__c": "2",
+            "Sequence__c": 1
         }
     ]
 }

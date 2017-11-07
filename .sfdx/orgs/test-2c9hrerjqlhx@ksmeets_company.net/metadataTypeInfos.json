@@ -3432,7 +3432,7 @@
             "contentIsBinary": false,
             "isAddressable": true,
             "isSourceTracked": true,
-            "hasStandardMembers": false,
+            "hasStandardMembers": true,
             "hasVirtualSubtypes": false,
             "decompositionConfig": {
                 "strategy": "nonDecomposed",

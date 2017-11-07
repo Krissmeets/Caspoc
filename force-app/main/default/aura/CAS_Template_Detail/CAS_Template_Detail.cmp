@@ -2,6 +2,8 @@
 
 <aura:attribute name="PageDetail" type="Object[]" />
 <aura:attribute name="sObjectName" type="String" />
+<aura:attribute name="ParentsObjectName" type="String" />
+<aura:attribute name="recordId" type="String"/>
 <aura:attribute name="temp" type="Object[]"/>
 
 <aura:attribute name="pagemsg" type="String[]"/>
@@ -12,8 +14,7 @@
 <force:recordData aura:id="forceRecordObject" layoutType="FULL" targetRecord="{!v.objectrecord}" targetFields="{!v.objectfields}" targetError="{!v.objecterror}"/>
 
 <aura:handler name="init" value="{!this}" action="{!c.jsInit}"/>
-<aura:handler name="SelectTemplateEvent" event="c:CAS_Template_Selected" action="{!c.jsLoadTemplateDetail}"/>
-
+<aura:handler name="SelectTemplateEvent" event="c:CAS_Template_Selected" action="{!c.jsLoadTemplateDetail}"/>    
 
 	<div>
 
@@ -33,8 +34,9 @@
 			    </div>    
 	        		<div class="slds-border_top">
 	        	 	  	<h3 class="slds-text-heading--medium">Record Detail</h3>
-
-						<div class="slds-p-around--medium slds-grid slds-wrap "> 
+						<center> <ui:spinner aura:id="spinner"/> </center>
+           
+						<div aura:id="recDetail" class="slds-p-around--medium slds-grid slds-wrap slds-hide"> 
 	    		    		{!v.temp}
 	    		    	</div>
 					</div>

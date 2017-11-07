@@ -6,24 +6,19 @@
         <label>checkbox</label>
     </customValue>
     <customValue>
-        <fullName>number</fullName>
-        <default>false</default>
-        <label>number</label>
-    </customValue>
-    <customValue>
-        <fullName>text</fullName>
-        <default>false</default>
-        <label>text</label>
-    </customValue>
-    <customValue>
         <fullName>date</fullName>
         <default>false</default>
         <label>date</label>
     </customValue>
     <customValue>
-        <fullName>picklist</fullName>
+        <fullName>lookup</fullName>
         <default>false</default>
-        <label>picklist</label>
+        <label>lookup</label>
+    </customValue>
+    <customValue>
+        <fullName>lookup fixed</fullName>
+        <default>false</default>
+        <label>lookup fixed</label>
     </customValue>
     <customValue>
         <fullName>none</fullName>
@@ -31,14 +26,39 @@
         <label>none</label>
     </customValue>
     <customValue>
+        <fullName>number</fullName>
+        <default>false</default>
+        <label>number</label>
+    </customValue>
+    <customValue>
         <fullName>phone</fullName>
         <default>false</default>
         <label>phone</label>
     </customValue>
     <customValue>
+        <fullName>picklist</fullName>
+        <default>false</default>
+        <label>picklist</label>
+    </customValue>
+    <customValue>
+        <fullName>picklist lookup</fullName>
+        <default>false</default>
+        <label>picklist lookup</label>
+    </customValue>
+    <customValue>
+        <fullName>text</fullName>
+        <default>true</default>
+        <label>text</label>
+    </customValue>
+    <customValue>
         <fullName>url</fullName>
         <default>false</default>
         <label>url</label>
+    </customValue>
+    <customValue>
+        <fullName>currency</fullName>
+        <default>false</default>
+        <label>currency</label>
     </customValue>
     <masterLabel>Field Type</masterLabel>
     <sorted>false</sorted>

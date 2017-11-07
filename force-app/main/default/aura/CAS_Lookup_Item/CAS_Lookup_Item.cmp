@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="Item" type="Object"/>
+    <aura:registerEvent name="ItemSelected" type="c:CAS_Lookup_Event"/>
+ 
+	<li role="presentation" class="slds-listbox__item slds-is-selected" onclick="{!c.selectItem}">
+        <span aura:id="{!v.Item.Id}" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+            <span class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                    <span class="slds-assistive-text">Description of icon</span>
+ 		            <lightning:icon iconName="standard:account" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                </span>
+            </span>
+            <span class="slds-media__body" >
+                <span class="slds-listbox__option-text slds-listbox__option-text_entity">{!v.Item.fld1}</span>
+                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">{!v.Item.fld2} • {!v.Item.fld3}</span>
+            </span>
+        </span>
+    </li>
+</aura:component>
