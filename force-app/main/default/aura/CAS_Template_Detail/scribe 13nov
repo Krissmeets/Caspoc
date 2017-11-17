@@ -1,0 +1,234 @@
+LMA
+WITHOUT this app, you will be unable to use Salesforce’s license-management tools to keep track of who is doing trials of your apps, activating them once they’ve paid, adding additional licenses to orgs, using the Partner Black Tab / Subscriber Support functionality, etc.
+
+The benefits of having this org are huge: all activity related to client interaction with the AppExchange are tracked in this org — if a client does a demo of your product, a new Lead is generated with Lead Source appropriately set to indicate that a Demo was done. If they do “Get it Now”, another Lead is generated with Lead Source set to “Package Installation”, and a new License record is created in this organization, TIED to the Lead. Once this Lead can be converted, the License records move right along into the Account and Contact, and you can do workflows on the Expiration Date / Install Date, etc.
+
+Create a central repository Making the LMO/LMA also the Appexchange Publishing Org (APO).
+
+8. Support your customers
+As either an ISV or an OEM, once you’ve got customers who have paid for your app, either through AppExchange Checkout / Recurly or through checks in the mail / credit card / direct deposit, and you’ve activated their licenses (through your LMO), you’ll want to be able to help your customers resolve any problems they may be having. For this, the Salesforce Partner Program has a great tool called the “Subscriber Support Console”, which comes along with the LMA and as such is automatically in your LMO. From the “Subscriber Support” tab included in this app, you can see ALL customers who have installed your application – getting a summary of their org and what packages from your company they have installed, whether those packages are active / expired, when they expire, what version their on, and more!
+
+PLUS, your customers will actually be able to Grant Login Access to your company, in addition to Salesforce.com Support and their admins, so that you can, through the Subscriber Support tab, actually log-in to a customer’s org exactly AS a customer sees it, and make changes – this is known as “Partner Black Tab” access. You will actually get special privileges – for instance the ability to see Protected Custom Settings and set special Sharing Rules – that your customers cannot see on their own.
+
+
+COA
+Revenue sharing
+https://developer.salesforce.com/docs/atlas.en-us.packagingGuide.meta/packagingGuide/coa_intro.htm
+
+
+
+
+
+LMA challenges/questions so far :
+The LMA is used for 3 (4) things on our side
+License management of our demo env/orgs (free of charge to the client & internal sales team use)
+License management to client orgs for our internal support people
+License management of client licenses
+(Still checking if internal DEV activities also require LMA)
+KS: the ability to 'login as' aka blacktab for ISV may be used by the developers/customer support.
+https://developer.salesforce.com/docs/atlas.en-us.packagingGuide.meta/packagingGuide/packaging_user_support.htm
+
+The main issue is that all of them are in the same place and the LMA overview is at best very messy with no easy view on what is what
+For the demo env license management
+We use trail for the first 90 days and then move to active as usually demo’s are around longer than 9 days
+For client orgs we are facing several challenges
+How should we deal with the versions of each software package? What when we release a new version or upgrade?
+KS: Per the documentation: You associate a managed package with the LMA only once. After a package is associated, the new versions that you create are automatically linked to the LMA.
+https://developer.salesforce.com/docs/atlas.en-us.workbook_lma.meta/workbook_lma/lma_associate_package.htm?search_text=version
+
+
+Is there always only one version at a time in the LMA and is hence the client forced/automatically updated to new version?
+If not, and we need to manually re-assign licenses in the LMA :
+Does moving licenses to the new version activate all new features in that version or does this require other steps?
+Is this seamless to the client or needs to be coordinated with them?
+Any guidance on correct process to avoid license duplication or lack of licenses during a fazed transition?
+KS: Licenses are linked to a package version. This is an automated process - no manual steps required.
+https://developer.salesforce.com/docs/atlas.en-us.workbook_lma.meta/workbook_lma/lma_license_details.htm?search_text=version
+
+As all licenses for UL are in one Org. Right now we have 20 Argentinia licenses, 20 Chile licenses and 17 internal support people. In LMA we have one entry for the UL Org with 57 licenses assigned to it.
+How can we differentiate Accenture support from client user licenses? Right now client can use ACN support licenses if these are not all consumed, exceeding what we agreed.
+Eg, UL at some point consumed 35 out of 30 licenses by using 5 of our 17 internal support people licenses
+This makes it impossible to ensure the client only uses agreed licenses and that what is ordered in COA is the reality at all points in time
+KS: Test if the right license is assigned in code - add this to a critical component. If the internal support license is using a different namespace then you can use iscurrentUserLicensed(namespace). Alternatively use a custom tests to check the license. You can also run a job on Heroku to check license usage (thru SOAP API)
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_userinfo.htm#apex_System_UserInfo_isCurrentUserLicensed
+https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_packagelicense.htm
+https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_userpackagelicense.htm
+
+
+How to differentiate users of different types and of different BU’s/countries (Supervisor, sales rep, …)?
+These come at different rates and should not be interchangeable
+Eg, Right now nothing stops UL from ordering 100 cheapest SalesRep Chile licenses at 20$ and install the package for Supervisor users in the UK which are supposed to have much higher rates
+KS: Use separate managed packages with a different namespaces. You can use an empty package to provide separate licenses. Alternatively leverage permissionsets for specific features related to supervisor, sales rep, etc. Check the assignments using a job on heroku and verify against agreed use.
+
+This makes it impossible to verify if orders in COA match the reality as we rely on client goodwill to provide the correct license request to us and execute that properly.(EG claim users are cheap license in cheap BU to then install for more expensive BU/user type)
+LMA tool usage/configuration
+From what I have seen from the tool in screen sharing sessions it ‘s (at present) not so nice.
+The only reference to the client is the meaningless Org Id (unless you do complex lookups or have an excel list to lookup yourselves). The LMA tool will not be used by the technical people and current overview is likely not usable.
+Demo, internal dev, support, client is as discussed above all one big mix/mess with no control over anything
+As stated above, all this means that for now the LMA can only be used for very crude “package access” management and all further details will be tracked in an in-house tool.
+KS: When an installer installs a managed package, a lead is automatically created in the LMO. The lead contains the installer's name, company, and email address. The Lead is converted to an account; the LMA app can be extended as needed because it is just another Salesforce App. However please make sure you follow the best practices here: https://developer.salesforce.com/docs/atlas.en-us.workbook_lma.meta/workbook_lma/lma_best_practices.htm
+Lead creation: https://help.salesforce.com/articleView?id=000181629&type=1
+
+
+
+
+Bigobjects - more challenging than expected
+Pricing / licensing - multi org support?
+Use of LMA
+Trialforce/Salesforce DX  - Test environments
+Einstein Analystics - Meeting with Thorsten/Tim; follow up with deck + questions from CAS
+Upgrade approach - best practices to minimize impact of upgrades
+Heroku Connect - 
+
+Heroku -> Ralph Eddy / Gordon Jackson
+Heroku Connect;
+
+
+
+
+Test classes:
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_qs_test.htm?search_text=test%20classes
+
+seealldata:
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_seealldata_using.htm?search_text=seealldata
+
+webservices:
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_web_services_methods.htm?search_text=webservice
+
+Transaction control:
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_transaction_control.htm?search_text=savepoint
+
+Rest API: Query + Explain
+https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_query.htm
+
+
+
+
+
+
+
+
+
+
+Why multiple solutions?
+Can we extend criteria sharing rules? - Detail about limits not needed
+
+openid
+web/app
+
+datamodel
+
+Role
+
+Manual sharing
+
+DWH is not a solution
+
+approval drug - standard approvals
+NDA sign - appexhcnage
+Reminders - workflow timebased
+Pool of trial patients - DWH / Bulk API to link patient/trial
+Segmentation - placebo / DWH 
+placebo - FLS
+multiple orgs
+files - chatter files 2GB
+Side effects/alers - escalations 
+Analyses/pagination - VF page
+Reporting requirements - standard report (patients see)
+multi lingual - custom labels / translation workbench
+
+
+Governance
+mutli org
+confederated model - best practices; share; but allow local development/innovation
+central development
+Appexchange type of setup - is this efficient?
+Support can be streamlined and centralized
+
+Risk
+COE - Business + IT
+Change board
+
+Design authority
+
+
+Key risk -> Off shore
+Support with local experise
+Hybrid Agile + Waterfall
+Are some part of the solution that require more
+Definition of Ready
+
+Parallel developnement
+-> Version control
+
+
+I would say NO.
+Motivation:
+Value/Scope - CTD is CTA minus 'Architect' - but it competes in the same arena. If we add CTD then the next thing will be CTB (Business-Architect), CTP (Program delivery), CTA+ (Architect+Developer), etc.
+
+Scalability of the cert: the Developer II was ADM501 - which had a programming assignment but it was always hard to find judges and results were inconsistent. 
+
+At the core we are all architects - CTA is already broken down into domains - candidates don't have to be 10/10 in every domain. And IMHO it is more challenging for a (true) Enterprise Architect to cover Coding than a TA to cover Architecture topics.
+
+Get out of your comfort zone - CTD encourages deeper skills, that is great but staying in your comfort zone is not the best way to learn something new.
+
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000gOMV
+
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000gOMk
+
+
+
+
+
+
+
+Here's the RCA for the 413 error you are seeing in REST API using get method-
+
+It occurs if the header size of an HTTP request exceeds the limit size of a buffer an application server prepares, as the error message suggests.
+
+When you send a query using REST API through workbench with a GET method, an HTTP request like the following will be sent to an application server.
+
+GET /services/data/v40.0/query?q=SELECT+Id%2CFirstName%2CLastName%2CEmail+FROM+Contact+WHERE+Id+IN...<trancated>
+Host: <host_name>:<port>
+Accept-Encoding: gzip
+Authorization: OAuth <a session id>
+User-Agent: Workbench/40.0.0
+X-PrettyPrint: true
+Content-Type: application/json; charset=UTF-8
+Accept: application/json
+(Other HTTP headers might be contained...)
+
+And if the total size of them exceeds the request header buffer size limit, which is 16K bytes in the case of Jetty which is our application server, the HTTP request will result in an error.
+
+
+Bigobject: bigobject__b, field: status__c
+contains: total 400 rows
+- 100 records status__c: New
+- 300 status__c: Completed
+
+Test 1 SOQL: 
+Result: returns count 400
+
+List<bigobject__b> lso = [select id from bigobject__b];
+integer i = 0;
+for (sobject fso: lso) {i++;}
+system.debug(logginglevel.info, 'COUNT:' + i);
+
+Test 2 SOQL FOR: select all 400 records 
+Result: This fails with SOQL Query row limit 50001.
+
+integer i = 0 ;
+for (sobject fso: [select id from bigobject__b]) {i++;}
+system.debug(logginglevel.info, 'COUNT:' + i);
+
+Test 3 SOQL FOR + LIMIT: select all 400 rows + limit 10000
+Result: Returns count 10000
+
+integer i = 0 ;
+for (sobject fso: [select id from bigobject__b] LIMIT 10000) {i++;}
+system.debug(logginglevel.info, 'COUNT:' + i);
+
+
+
+
+

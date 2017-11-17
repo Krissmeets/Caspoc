@@ -1,14 +1,21 @@
-({
+(
+//##################################
+//
+// DISCLAIMER 
+// Code comes with not warranty, has not passed security review and is provided as is
+// Date: November 2017
+// Contact: ksmeets@salesforce.com
+//
+//##################################
 
 
+{
     jsInit : function(cmp, evt, hlp) {
         hlp.requestData(cmp,'__RecentlyViewed__');
         var cmp1 = cmp.find("main");
 
         console.log ("CLASS:" + cmp.get("v.class"));
         $A.util.addClass(cmp1,cmp.get("v.class"));
-
-      //  cmp.set("v.input","TESTING");
 
     },
    
