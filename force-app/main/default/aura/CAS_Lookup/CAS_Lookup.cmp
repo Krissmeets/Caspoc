@@ -1,0 +1,68 @@
+<aura:component controller="CAS_Lookup" >
+    <aura:attribute name="name" type="String" default=""/>
+    <aura:attribute name="type" type="String" default=""/>
+    <aura:attribute name="input" type="String" default=""/>
+    <aura:attribute name="label" type="String" default=""/>
+    <aura:attribute name="lookupid" type="String" default=""/>
+    <aura:attribute name="expanded" type="String" default="false"/>
+    <aura:attribute name="msoRecords" type="Map" default=""/>
+    <aura:attribute name="lRecords" type="List" default="[]"/>
+    <aura:attribute name="Item" type="Object" default="{}"/>
+
+    <aura:attribute name="class" type="String"/>
+    <aura:attribute name="required" type="Boolean" default="true"/>
+       
+	<aura:handler name="init" value="{!this}" action="{!c.jsInit}"/>
+    <aura:handler name="ItemSelected" event="c:CAS_Lookup_Event" action="{!c.jsItemSelect}"/>
+    
+	  <div aura:id="main" class="slds-form-element">
+                
+          <label class="slds-form-element__label">
+            <aura:if isTrue="{!v.required}">
+            <abbr class="slds-required" title="required">*</abbr> 
+            </aura:if>
+          {!v.label}
+          </label>
+    <div class="slds-form-element__control slds-grow">
+      <div aura:id="combobox_container" class="slds-combobox_container slds-has-inline-listbox"  >
+        
+          <div aura:id="combobox" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="{!v.expanded}" aria-haspopup="listbox" role="combobox">
+
+              <div aura:id="lookup1" class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                <ui:inputText aura:id="input1" updateOn="keyup" click="{!c.jsActive}" blur="{!c.jsInactive}" keyup="{!c.jsKeyPress}" class="slds-input slds-combobox__input" value="{!v.input}" placeholder="{!'Select ' + v.label}" />
+                <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                </span>
+              </div> 
+
+           <div aura:id="lookup2" class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-hide" role="none">
+	      
+               <span class="slds-icon_container slds-combobox__input-entity-icon" title="record">
+		            <lightning:icon class="slds-icon slds-icon slds-icon_small slds-icon-text-default" iconName="standard:account" size="x-small" alternativeText="icon"/>
+                    <span class="slds-assistive-text"></span>
+	            </span>
+               	<span>
+                    <span class="slds-pill__label slds-p-left_x-large">
+                            {!v.Item.fld1}
+                    </span>                      
+               </span>
+                <button onclick="{!c.jsClear}" class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Remove selected option">
+	             	<lightning:icon class="slds-button__icon" iconName="utility:close" size="x-small" alternativeText="search"/>  
+                    <span class="slds-assistive-text">Remove selected option</span>
+	            </button>   
+               
+	       </div>  
+            
+          <div class="slds-dropdown slds-dropdown_fluid slds-listbox_vertical slds-dropdown-trigger slds-dropdown-trigger_click" role="listbox">
+            <ul class="slds-dropdown__list" role="presentation">
+                 <aura:iteration items="{!v.lRecords}" var="item">
+           			<c:CAS_Lookup_Item Item="{!item}"/>
+        		 </aura:iteration> 
+            </ul>
+          </div>
+      
+        </div>
+      </div>
+   
+    </div>
+  </div>
+</aura:component>

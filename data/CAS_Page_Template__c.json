@@ -1,0 +1,34 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "CAS_Page_Template__c",
+                "referenceId": "CAS_Page_Template__cRef1"
+            },
+            "Sequence__c": 3,
+            "Page_columns__c": "3",
+            "Object__c": "Opportunity",
+            "Name": "Template 3"
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Template__c",
+                "referenceId": "CAS_Page_Template__cRef2"
+            },
+            "Sequence__c": 2,
+            "Page_columns__c": "2",
+            "Object__c": "Account",
+            "Name": "Template 2"
+        },
+        {
+            "attributes": {
+                "type": "CAS_Page_Template__c",
+                "referenceId": "CAS_Page_Template__cRef3"
+            },
+            "Sequence__c": 1,
+            "Page_columns__c": "1",
+            "Object__c": "Account",
+            "Name": "Template 1"
+        }
+    ]
+}

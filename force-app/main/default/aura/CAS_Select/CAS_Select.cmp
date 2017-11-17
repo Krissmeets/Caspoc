@@ -1,0 +1,21 @@
+<aura:component>
+<aura:attribute name="name" type="String" default=""/>
+<aura:attribute name="type" type="String" default=""/>
+<aura:attribute name="selectOptions" type="String[]"/>
+<aura:attribute name="selectLabel" type="String"/>
+<aura:attribute name="selectValue" type="String"/>
+<aura:attribute name="selectClass" type="String"/>
+
+	<div class="{!v.selectClass}">
+	<lightning:select aura:id="selectMain" name="{!v.selectLabel}" label="{!v.selectLabel}" value="{!v.selectValue}">
+
+        <aura:iteration items="{!v.selectOptions}" var="option">
+
+            <option value="{!option}" text="{!option}"></option>
+
+        </aura:iteration>
+
+    </lightning:select>
+</div>
+
+</aura:component>	

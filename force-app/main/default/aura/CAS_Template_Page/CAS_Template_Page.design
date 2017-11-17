@@ -1,0 +1,3 @@
+<design:component label="CAS_Template_Page">
+<design:attribute name="TargetObject" label="Target Object" datasource="Account,Contact,Opportunity" />    
+</design:component>

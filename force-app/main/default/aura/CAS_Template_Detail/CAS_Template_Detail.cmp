@@ -1,0 +1,51 @@
+<aura:component access="global" controller="CAS_PageController">
+
+<aura:attribute name="PageDetail" type="Object[]" />
+<aura:attribute name="sObjectName" type="String" />
+<aura:attribute name="ParentsObjectName" type="String" />
+<aura:attribute name="recordId" type="String"/>
+<aura:attribute name="temp" type="Object[]"/>
+
+<aura:attribute name="pagemsg" type="String[]"/>
+
+<aura:attribute name="objectrecord" type="Object" />
+<aura:attribute name="objectfields" type="Object" />
+<aura:attribute name="objecterror" type="String" />
+<force:recordData aura:id="forceRecordObject" layoutType="FULL" targetRecord="{!v.objectrecord}" targetFields="{!v.objectfields}" targetError="{!v.objecterror}"/>
+
+<aura:handler name="init" value="{!this}" action="{!c.jsInit}"/>
+<aura:handler name="SelectTemplateEvent" event="c:CAS_Template_Selected" action="{!c.jsLoadTemplateDetail}"/>    
+
+	<div>
+
+				<c:CAS_Template_Selector sObjectName="{!v.sObjectName}" />
+
+        		<div aura:id="DetailPage" class="slds-panel">
+        		<div class="slds-border_bottom">
+		
+					<aura:if isTrue="{!not(empty(v.pagemsg))}">
+					<ui:message title="Error - this action cannot be completed" severity="error" closable="false">
+		                    <aura:iteration items="{!v.pagemsg}" var="item">
+		                    	<div class="slds-text-body_regular"> {!item} </div>
+		                    </aura:iteration>
+		            </ui:message>
+		        	</aura:if>
+			    <br/>
+			    </div>    
+	        		<div class="slds-border_top">
+	        	 	  	<h3 class="slds-text-heading--medium">Record Detail</h3>
+						<center> <ui:spinner aura:id="spinner"/> </center>
+           
+						<div aura:id="recDetail" class="slds-p-around--medium slds-grid slds-wrap slds-hide"> 
+	    		    		{!v.temp}
+	    		    	</div>
+					</div>
+       			</div>
+
+	            <div class="slds-p-around--medium slds-grid slds-grid_pull-padded-medium slds-grid_align-end">                
+	                <lightning:button  variant="neutral" label="Cancel" onclick="{!c.jsNavigateHome}"/>
+	                <lightning:button  variant="brand" label="Create" onclick="{!c.jsCreate}" />
+	            </div>
+</div>
+
+</aura:component>	

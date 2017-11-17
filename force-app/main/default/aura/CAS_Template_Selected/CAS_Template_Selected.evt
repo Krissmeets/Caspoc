@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Event fired when template selected">
+<aura:attribute name="Template" type="String"/>
+</aura:event>
+
+
